@@ -350,7 +350,7 @@ bound and acceptance threshold are
 
 ```math
 \rho=1-(1-\delta)^{1/M},\qquad
-\bar q=\operatorname{Beta}^{-1}(1-\rho;k+1,N-k),\qquad
+\bar q=\mathrm{Beta}^{-1}\left(1-\rho;k+1,N-k\right),\qquad
 \bar q\leq\frac{\epsilon-\alpha}{1-\alpha}.
 ```
 
