@@ -1,0 +1,93 @@
+{
+  "format_version": "drs-f16-public-assets-v1",
+  "provenance": {
+    "source_repository": "jsbsim-gym",
+    "nominal_trajectory_source": "offline F-16 trajectory, 800 samples",
+    "uncertainty_source": "offline calibrated empirical model, 29997 rows",
+    "nominal_input_sha256": "0595f59d54d538928493bc8bb9fa9fe964e13257a678f187c5d120ea5f5d5b04",
+    "uncertainty_input_sha256": "1155b32b9dd3b721837c0b3afc7378c227c807303f0420de819245bb62608f86",
+    "terrain_input_sha256": "24bc81ee61b90f8b3afe50fca5fa68b7a14d946a091fc509a353ad06833dbe6d",
+    "conversion_runtime": "source project environment with JAX_PLATFORMS=cpu"
+  },
+  "uncertainty": {
+    "feature_names": [
+      "alpha",
+      "beta",
+      "mach",
+      "p",
+      "q",
+      "r",
+      "delta_t",
+      "delta_e",
+      "delta_a",
+      "delta_r",
+      "prev_delta_t",
+      "prev_delta_e",
+      "prev_delta_a",
+      "prev_delta_r",
+      "qbar",
+      "canyon_width",
+      "canyon_width_grad"
+    ],
+    "removed_training_only_features": ["alpha_dot", "wind_u", "wind_v", "wind_w"],
+    "residual_names": ["w_C_X", "w_C_Y", "w_C_Z", "w_C_L", "w_C_M", "w_C_N"],
+    "rows": 29997,
+    "sampler_defaults": {
+      "neighbor_count": 20,
+      "max_pool_size": 512,
+      "epsilon_w": 200.0,
+      "alpha_threshold": 0.8
+    },
+    "width_sort": "stable ascending; distance weighted categorical sampling"
+  },
+  "files": {
+    "models/nominal_coeff_weights.npz": {
+      "bytes": 7900,
+      "sha256": "b47db924155f9f585d4ea334fa1234ddd57c360d8e5b3709d2dfd5d641189551"
+    },
+    "models/nominal_trajectory.npz": {
+      "bytes": 74032,
+      "sha256": "c9aa87c6551ff7576e4b5436fc68eb7047ed3e990f054415c47ccfb3fadc544f"
+    },
+    "models/uncertainty.npz": {
+      "bytes": 2666866,
+      "sha256": "154a8e333df1fae3bc913095418a82053b603577002bf3461dadf3a7314f7c96"
+    },
+    "terrain/black-canyon.tif": {
+      "bytes": 4724442,
+      "sha256": "24bc81ee61b90f8b3afe50fca5fa68b7a14d946a091fc509a353ad06833dbe6d"
+    },
+    "aircraft/f16/Engines/F100-PW-229.xml": {
+      "bytes": 3647,
+      "sha256": "9b053a142f6f8a7f9c02452c67f531a8cba8d0628fa9068d4973a1a3cf39f265"
+    },
+    "aircraft/f16/Engines/direct.xml": {
+      "bytes": 108,
+      "sha256": "f116b6f6d25d4b2b46c2f0faa713e85d0064db7a634105bc96e391fb52e4dde5"
+    },
+    "aircraft/f16/INSTALL": {
+      "bytes": 387,
+      "sha256": "88b83aa99bff3c2bac235bea0d04272ea9a6dd10424a700b4df6db45a8f53c49"
+    },
+    "aircraft/f16/README": {
+      "bytes": 3452,
+      "sha256": "be2da94456eff5af260cd9a17a534c24e9deb6ae8ccf456313aff42ebe433b35"
+    },
+    "aircraft/f16/Systems/hook.xml": {
+      "bytes": 2311,
+      "sha256": "9067ea104820d9d2d2f438b0361cbfdc9cea28a7969bd46eaa540fd7d9dfdd62"
+    },
+    "aircraft/f16/Systems/pushback.xml": {
+      "bytes": 1192,
+      "sha256": "a3c0e2fc8a494b18b7158718cfc96d51fb34aac440965c0c73a1b7f33bb1a64b"
+    },
+    "aircraft/f16/f16.xml": {
+      "bytes": 61104,
+      "sha256": "b620d39e82b4bcddc5bf6e7283c181aad1b5d183eff4cc716d424b213eedef9f"
+    },
+    "aircraft/f16/reset00.xml": {
+      "bytes": 548,
+      "sha256": "738c7d0f3495b072bcdb570c203c92cbd7ae5af3c4213f01183a46dd861a0c85"
+    }
+  }
+}
